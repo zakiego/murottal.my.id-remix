@@ -9,7 +9,7 @@ import {
 import type { MetaFunction } from "remix";
 
 export const meta: MetaFunction = () => {
-  return { title: "Remix Run" };
+  return { title: "Remix Tailwindcss Starter" };
 };
 
 export default function App() {

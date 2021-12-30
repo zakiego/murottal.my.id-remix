@@ -2,6 +2,14 @@
 
 - [Remix Docs](https://remix.run/docs)
 
+## How to use
+
+```sh
+git clone https://github.com/zakiego/remix-tailwindcss-starter
+cd remix-tailwindcss-starter
+npm install
+```
+
 ## Development
 
 From your terminal:

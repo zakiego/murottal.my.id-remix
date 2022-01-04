@@ -82,11 +82,13 @@ export const QariCard = () => {
             className="backdrop-blur-3xl flex py-5 md:py-12 shadow-card bg-white rounded-[34px] px-5"
           >
             <div className="justify-center my-auto text-center">
-              <img
-                className="w-3/4 mx-auto rounded-full r"
-                src={qari.image}
-                alt={qari.name}
-              />
+              <a href={qari.social?.youtube}>
+                <img
+                  className="w-3/4 mx-auto rounded-full r"
+                  src={qari.image}
+                  alt={qari.name}
+                />
+              </a>
               <h1 className="mt-6 text-xs font-medium md:mt-8 md:text-xl text-black-smooth">
                 {qari.name}
               </h1>

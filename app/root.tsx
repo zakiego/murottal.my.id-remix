@@ -1,3 +1,4 @@
+import type { MetaFunction } from "remix";
 import {
   Links,
   LiveReload,
@@ -6,15 +7,26 @@ import {
   Scripts,
   ScrollRestoration,
 } from "remix";
-import type { MetaFunction } from "remix";
 
 export const meta: MetaFunction = () => {
-  return { title: "Remix Tailwindcss Starter" };
+  const title = "Kumpulan Murottal";
+  const description = "Temukan qari kesukaanmu";
+  return {
+    title,
+    description,
+    keywords: "Murrottal",
+    "twitter:image":
+      "https://hqxduecuxrozqlaicqkg.supabase.in/storage/v1/object/public/qari/banner.png",
+    "twitter:card": "summary_large_image",
+    "twitter:creator": "@zakiego",
+    "twitter:site": "murottal.my.id",
+    "twitter:title": "Kumpulan Murottal",
+  };
 };
 
 export default function App() {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />

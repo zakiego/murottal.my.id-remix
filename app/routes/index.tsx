@@ -3,7 +3,8 @@ import { useLoaderData } from "remix";
 import { Link } from "remix";
 
 import { github, telegram, youtube } from "~/assets/icon";
-import type { Qari } from "~/lib/qari";
+import type { Analytictype, Qari } from "~/lib/qari";
+import { supabase } from "~/utils/supabaseClient";
 
 import { QariAPI } from "./api/v1/qari";
 
@@ -83,6 +84,7 @@ export const QariCard = () => {
           >
             <div className="justify-center my-auto text-center">
               <a href={qari.social?.youtube}>
+                {/* PostAnalytic(qari.id, "image") */}
                 <img
                   className="w-3/4 mx-auto rounded-full r"
                   src={qari.image}
@@ -96,7 +98,10 @@ export const QariCard = () => {
                 {qari.name_ar}
               </p>
               <div className="flex justify-center mt-4 space-x-2 md:mt-5">
+                {/* PostAnalytic(qari.id, "youtube") */}
                 <SocialIcon kind="youtube" href={qari.social?.youtube} />
+
+                {/* PostAnalytic(qari.id, "tekegram") */}
                 <SocialIcon kind="telegram" href={qari.social?.telegram} />
               </div>
             </div>
@@ -105,6 +110,13 @@ export const QariCard = () => {
       })}
     </div>
   );
+};
+
+export const PostAnalytic = async ({ id, type }: Analytictype) => {
+  console.log(id);
+  await supabase
+    .from("qari_stats")
+    .insert([{ qari_id: id.toString(), type: type }]);
 };
 
 export const SocialIcon = ({

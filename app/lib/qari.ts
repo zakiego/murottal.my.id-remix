@@ -14,3 +14,8 @@ export type Social = {
   twitter?: string;
   web?: string;
 };
+
+export type Analytictype = {
+  id: number;
+  type: "image" | "youtube" | "telegram";
+};

@@ -6,7 +6,7 @@ import { supabase } from "~/utils/supabaseClient";
 export const QariAPI = async () => {
   const { data, error } = await supabase
     .from("qari")
-    .select("name, name_ar, image, social")
+    .select("id, name, name_ar, image, social")
     .order("name", { ascending: true });
 
   return json({ data, error });

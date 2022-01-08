@@ -1,4 +1,4 @@
-export type Qari = {
+export type QariType = {
   id: number;
   name: string;
   name_ar?: string;
@@ -13,9 +13,4 @@ export type Social = {
   telegram?: string;
   twitter?: string;
   web?: string;
-};
-
-export type Analytictype = {
-  id: number;
-  type: "image" | "youtube" | "telegram";
 };

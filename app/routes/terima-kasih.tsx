@@ -1,6 +1,6 @@
 import { Link } from "remix";
 
-import { Navbar } from ".";
+import { Navbar } from "~/components/navbar";
 
 export default function TerimKasih() {
   return (

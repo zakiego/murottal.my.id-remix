@@ -2,7 +2,7 @@ import type { ActionFunction } from "remix";
 import { Form, redirect, useTransition } from "remix";
 import invariant from "tiny-invariant";
 
-import { Navbar } from ".";
+import { Navbar } from "~/components/navbar";
 
 type PostError = {
   message?: boolean;

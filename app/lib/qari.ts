@@ -1,4 +1,4 @@
-export type Qari = {
+export type QariType = {
   id: number;
   name: string;
   name_ar?: string;
